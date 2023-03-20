@@ -1,0 +1,12 @@
+EX11_06
+David Greni
+I did not cheat
+
+6. 
+T01: Input "a", "b", "c"
+T02: Define r1 using a, b, c
+T03: Define r2 using a, b, c
+T04: Test r1, r2 are real numbers, T05
+	T05: Output r1, r2 
+T06: Test r1 or r2 are not real numbers, T07
+	T07: Output error message

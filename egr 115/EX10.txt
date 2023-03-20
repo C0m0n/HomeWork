@@ -1,0 +1,33 @@
+David Greni
+I did not cheat 
+EX 10 
+
+1. Main task: Determine the number with the greatest value from a list of numbers 
+T01: Determine the amount of numbers in the list
+T02: Start at the first number and record the value
+T03: Move to the next number and record the value if it is greater than the previous value
+
+
+2. Main task: Truncate n and then subtract one if n is less than 0 
+T01: Truncate n 
+T02: Determine if n is less than 0
+T03: If n is less than 0 then
+	T04: Subtract 1 from n 
+
+3. Main task: Determine if n is positive or negative then move n to the next integer toward 0 
+T01: Determine if n is non zero
+T02: If n has a decimal then truncate
+T03: If n does not have a decimal then do nothing
+
+4. Main task: Restrict the door so that it can only be opened by someone with access and prevent the door from opening to a person that doesn't have access
+T01: close the door
+T02: apply any locking system available
+
+5. Main task: adjust the time on the clock to a time specified by the user 
+T01: Determine the desired time 
+T02: Adjust the time on clock using the provided adjusting tool
+T03: Save the desired time
+
+
+
+	

@@ -1,0 +1,11 @@
+David Greni I did not cheat
+EX 13 
+
+T01: INPUT "hydrogen"
+T02: TEST if hydrogen is an integer between 1 and 3, T03-T07
+	T03: INPUT "pH"
+	T04: INPUT "name" 
+	T05: INPUT "weight" 
+	T06: DEFINE "mass" using weight and dividing it by 100 mL
+	T07: OUTPUT a table using pH, name, weight, and mass
+T08: OUTPUT an error message 

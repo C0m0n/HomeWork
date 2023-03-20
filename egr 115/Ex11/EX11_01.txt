@@ -1,0 +1,8 @@
+EX 11_01
+David Greni 
+I did not cheat
+
+1. 
+A) The possible inputs are the time, power level, temperature probe, 
+
+B) The possible outputs are numbers on the screen, turn on the magnetron, rotate the spinning tray, the ringer, turning the light on

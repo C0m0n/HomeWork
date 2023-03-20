@@ -1,0 +1,23 @@
+Lab 04 
+David Greni 
+I did not cheat 
+
+T01: DEFINE: "grain1n" as Grain 1 name
+T02: DEFINE: "grain2n" as Grain 2 name
+T03: DEFINE: "grain3n" as Grain 3 name
+T04: DEFINE: "grain1a10" as Grain 1 amount in 2010
+T05: DEFINE: "grain2a10" as Grain 2 amount in 2010
+T06: DEFINE: "grain3a10" as Grain 3 amount in 2010
+T07: DEFINE: "grain1a11" as Grain 1 amount in 2011
+T08: DEFINE: "grain2a11" as Grain 2 amount in 2011
+T09: DEFINE: "grain3a11" as Grain 3 amount in 2011
+
+
+T010: DEFINE: "prct_export" as a percent change using grain amount variables
+
+T011: OUTPUT: table using grain#n and grain#a variables 
+
+T012: OUTPUT: percent change using prct_export variable
+
+T013: INPUT: what grain as "grain"
+T014: INPUT: how much for 2012 as "grain_ammount"

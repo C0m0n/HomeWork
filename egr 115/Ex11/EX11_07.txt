@@ -1,0 +1,16 @@
+EX11_07
+David Greni 
+I did not cheat
+
+7. 
+T01: Define "days" as 0 
+T02: Define "eat"
+T03: Input "answer"
+T04: Test answer if "yes", T00
+	T05: Define: add 1 to days
+	T06: Define: add 1 to eat
+T07: Test answer if "no", T08
+	T08: Define: add 1 to days
+T09: Repeat until days = 365, T01-T08
+T10: Output eat 
+	

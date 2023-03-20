@@ -1,0 +1,20 @@
+David Greni
+I did not cheat
+
+1.
+T = 0.           T is now 0 
+T + 3 → 3        T is now 3
+T + 15 → 18      T is now 3 + 15
+T - 2 → 13       T is now 3 + 15 - 2 
+T + 12.2 → 25.2  T is now 3 + 15 - 2 + 12.2 
+T - 34.5 → -9.3  T is now 3 + 15 - 2 + 12.2 - 34.5 
+
+2. 
+P = 1 
+P * 2 → 2
+P * 3 → 6
+P * 4 → 24 
+P * 5 → 120 
+P * 6 → 720 
+
+

@@ -1,0 +1,28 @@
+
+Login Page
+[ ] Change login to prevent empty fields from being entered
+[ ] Change the login page to pull passwords and usernames
+[ ] Comments
+[ ] Background immage
+
+Main
+[ ] Transfer button
+[ ] Withdrawl button
+    -Quick and specified ammount
+[ ] Deposit
+[ ] Show ballance
+[√] Cant be Resizable
+[ ] Transactional history
+[ ] Text tooltip?
+
+
+Create
+
+Acount
+[ ] History file with transaction history
+[ ] Account history for each account
+[ ] Protection against overdraft
+[ ] Session info textfile
+
+Transfer
+[ ] Insure that the account exists

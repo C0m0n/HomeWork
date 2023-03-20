@@ -1,0 +1,8 @@
+EX 12 
+David Greni
+I did not cheat
+
+1. 
+T01: Input "weight", "volume1" "volume2" 
+T02: Define "molarity" using weight, volume1, volume2 
+T03: Output to table using molarity

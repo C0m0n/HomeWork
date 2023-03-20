@@ -1,0 +1,9 @@
+EX 11_02
+David Greni 
+I did not cheat
+
+2. 
+Input: v0 as variable v 
+Input: theta as variable x 
+Define: d as the value given by formula s using v and x 
+Output: d to user

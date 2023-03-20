@@ -1,0 +1,13 @@
+EX11_08 
+David Greni 
+I did not cheat
+
+8. 
+T01: Input "hours"
+T02: Test if hours > 0
+	T03: Input "grade" 
+T04: Repeat until hours = 0 
+T05: Define "gpa" using hours, grade
+T06: Output gpa
+
+		

@@ -1,0 +1,10 @@
+EX 11_03
+David Greni 
+I did not cheat
+
+3.
+
+T01: Input "a", "b", "c" 
+T02:Determine q to be the quadratic formula
+T03:Determine r1, r2 to be the solution to formula q using a b c
+T04:Output r1, r2 

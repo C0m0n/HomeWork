@@ -1,0 +1,12 @@
+David Greni
+I did not cheat
+
+1. Main task: Determine the value that is obtained when -2.5 is truncated and rounded toward negative infinity
+
+2. Main task: Determine the closest integer that is obtained when 2.1 is added to the product of  3.1 and 5.4  
+
+3. Main task: Determine the number with the greatest value out of 1,2,5,4,-5
+
+4. Main task: Restrict the door so that it can only be opened by someone with access and prevent the door from opening to a person that doesn't have access
+
+5. Main task: adjust the time on the clock to a time specified by the user 

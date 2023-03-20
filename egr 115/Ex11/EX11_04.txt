@@ -1,0 +1,8 @@
+EX11_04
+David Greni 
+I did not cheat
+
+4. 
+T01:Input "grades" 
+T02:Define "gpa" using grades
+T03:Output to file gpa

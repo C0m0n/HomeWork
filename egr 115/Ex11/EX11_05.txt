@@ -1,0 +1,11 @@
+EX11_05
+David Greni
+I did not cheat
+
+5. 
+T01: Input "angle", "v0" 
+T02: Test if angle is > 0, T03-T04
+	T03: Define "distance" using angle, v0  
+	T04: Output distance
+T05: Test if angle is < 0, T06
+	T06: Output error message
