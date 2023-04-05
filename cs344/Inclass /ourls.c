@@ -11,6 +11,8 @@
 
 int ls_file(char * fname);
 int ls_dir(char * dname);
+void printNames(char *[], int, char *);
+void sortNames(char *[], int);
 
 struct stat mystat, *sp;
 char * t1 ="rwxrwxrwx-------";
@@ -105,13 +107,60 @@ int ls_dir(char * dname)
     struct dirent *dirp;
     dp = opendir(dname);
     char dnamecpy[1024]; 
+    int numofelements = 0;
     while ((dirp = readdir(dp)) != NULL){
-      strcpy(dnamecpy, dname);
-      strcat(dnamecpy, dirp->d_name);
-      ls_file(dnamecpy);
+      numofelements++;
     }
+    printf("%d\n", numofelements);
+    char *names[numofelements];
+
+    DIR * dp2 = opendir(dname);
+    for(int i = 0; i < numofelements; i++){
+      dirp = readdir(dp2);
+      names[i] = dirp->d_name;
+    }
+
+    sortNames(names, numofelements);
+   //  for(int i=0;i<n;i++){
+   //    for(int j=i+1;j<n;j++){
+   //       if(strcmp(filenames[i],filename[j])>0){
+   //          strcpy(s,str[i]);
+   //          strcpy(str[i],str[j]);
+   //          strcpy(str[j],s);
+   //       }
+   //    }
+      // strcat(dnamecpy, dirp->d_name);
+      // ls_file(dnamecpy);
+    printNames(names, numofelements, dname);
+
     closedir(dp);
 	
 }
 
-	
+void printNames(char *names[], int numofelements, char * dname){
+
+  char dnamecpy[1024]; 
+
+  for(int i = 0; i < numofelements; i++){
+    strcpy(dnamecpy, dname);
+    strcat(dnamecpy,"/");
+    strcat(dnamecpy, names[i]);
+    ls_file(dnamecpy);
+  }
+
+}
+
+void sortNames(char *names[], int numofelements){
+  for(int i = 0; i < numofelements; i++){
+    for(int j = 0; j < numofelements-1; j++){
+      if(strcmp(names[j], names[j+1]) > 0){
+        char * temp = names[j];
+        names[j] = names[j+1];
+        names[j+1] = temp;
+      }
+    }
+  }
+
+}
+
+
