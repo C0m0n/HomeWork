@@ -111,9 +111,7 @@ int ls_dir(char * dname)
     while ((dirp = readdir(dp)) != NULL){
       numofelements++;
     }
-    printf("%d\n", numofelements);
     char *names[numofelements];
-
     DIR * dp2 = opendir(dname);
     for(int i = 0; i < numofelements; i++){
       dirp = readdir(dp2);
@@ -121,16 +119,6 @@ int ls_dir(char * dname)
     }
 
     sortNames(names, numofelements);
-   //  for(int i=0;i<n;i++){
-   //    for(int j=i+1;j<n;j++){
-   //       if(strcmp(filenames[i],filename[j])>0){
-   //          strcpy(s,str[i]);
-   //          strcpy(str[i],str[j]);
-   //          strcpy(str[j],s);
-   //       }
-   //    }
-      // strcat(dnamecpy, dirp->d_name);
-      // ls_file(dnamecpy);
     printNames(names, numofelements, dname);
 
     closedir(dp);
