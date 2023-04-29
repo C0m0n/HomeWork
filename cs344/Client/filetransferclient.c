@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 
 void talkToServer(FILE * fileSocket)
 {
-    char filename[FILE_NAME_SIZE];   /* Name of file on server. Includes space for NULL char */
+  char filename[FILE_NAME_SIZE];   /* Name of file on server. Includes space for NULL char */
 	unsigned char filenameLen;
 	long fileSize = 0;
 	unsigned int totalBytesRcvd = 0;

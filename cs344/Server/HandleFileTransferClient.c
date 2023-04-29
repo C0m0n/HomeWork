@@ -8,9 +8,10 @@
 #define FILE_NAME_SIZE 51 /*Includes room for null */
 
 void DieWithError(char *);  /* Error handling function */
-void sendfile(char *, FILE *);
+void sendFileToClient(char *, FILE *);
 long findSize(FILE *);
-void sendFile(long fileSize, FILE * fp, FILE * fileSocket);
+void sendToClient(long fileSize, FILE * fp, FILE * fileSocket);
+void HandleServerError(FILE * );
 
 void HandleFileTransferClient(int clntSock)
 {
@@ -31,12 +32,12 @@ void HandleFileTransferClient(int clntSock)
 	filename[filenameLen] = '\0';
 	printf("File name: %s\n", filename);
 	
-	sendfile(filename, fileSocket);
+	sendFileToClient(filename, fileSocket);
 	
 	fclose(fileSocket);
 }
 
-void sendfile(char * filename, FILE * fileSocket)
+void sendFileToClient(char * filename, FILE * fileSocket)
 {
 	long fileSize;
     // opening the file in read mode 
@@ -44,7 +45,7 @@ void sendfile(char * filename, FILE * fileSocket)
   
     // checking if the file exist or not 
     if (fp == NULL) 
-		DieWithError("File not found");
+		HandleServerError(fileSocket);
 	
 	//Get size of file
 	fileSize = findSize(fp);
@@ -56,9 +57,9 @@ void sendfile(char * filename, FILE * fileSocket)
 	
 	//Change fileSize back to use it
 	fileSize = ntohl(fileSize);
-	printf("File size: %d\n", fileSize);
+	printf("File size: %ld\n", fileSize);
 
-	sendFile(fileSize, fp, fileSocket);
+	sendToClient(fileSize, fp, fileSocket);
 	
     // closing the file 
     fclose(fp); 	
@@ -77,7 +78,7 @@ long findSize(FILE * fp)
     return res; 
 }
 
-void sendFile(long fileSize, FILE * fp, FILE * fileSocket)
+void sendToClient(long fileSize, FILE * fp, FILE * fileSocket)
 {
 	//Send file to client
 	printf("Here is the file:\n");
@@ -103,4 +104,10 @@ void sendFile(long fileSize, FILE * fp, FILE * fileSocket)
 		fflush(fileSocket);
 		printf("%s", fileBuffer);
 	}
+
+}
+void HandleServerError(FILE * fileSocket){
+	printf("Error sending Error Message\n");
+	char errorMessage[16] = "File not found!";
+	fwrite(errorMessage, 15, 1, fileSocket);
 }

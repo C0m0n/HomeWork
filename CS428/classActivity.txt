@@ -1,0 +1,9 @@
+Alice = a = 24 
+Bob = b = 37 
+g = 7
+n = 107
+shared is g^ab mod n
+ab = 888
+Answer = 7^888 mod 107 
+
+I did the course eval
