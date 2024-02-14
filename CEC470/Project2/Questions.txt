@@ -1,0 +1,12 @@
+1. the opcode 0x00 will look like a store from the ACC into the address given by the operand 
+
+2. With the math operations all bits are being used which means there are 2^7 possible opcodes 
+with mem operations there are 2^4 possible opcodes
+with branch operations there are 2^3 possible opcodes.
+256 - 2^7 - 2^4 - 2^3 = 104 possible opcodes left for the rest of the operations
+
+3. To compare ACC with constant we would need to implement another register to store one of the values
+To implement a stack we would need to create another register to store the stack pointer 
+To take the 2's complement we would also need another register to store a value and add a routine to take the 2's complement
+
+4. If we were to split decode and execute we would need to implement some kind of pipeline to store the decoded instruction that the execute stage can use. This would require more registers and more logic to implement.

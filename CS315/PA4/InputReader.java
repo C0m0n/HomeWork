@@ -11,7 +11,7 @@ public class InputReader {
     public static String [] parseInputFile(String file)
     {
         ArrayList<String> words = new ArrayList<String>();
-
+        file = "src/input.txt";
         String instr;
         try {
             //Create input reader
@@ -25,8 +25,6 @@ public class InputReader {
                 for (int j=0; j < linedata.length; j++) {
                     words.add(linedata[j].toLowerCase());
                 }
-
-                in.close();
             }
         } catch (IOException io) {
             System.err.println("Error in Parsing file.");
@@ -38,7 +36,7 @@ public class InputReader {
 
     public static void main(String [] args) {
 
-        String inputFile = "input.txt";
+        String inputFile = "src/input.txt";
         String [] words  = InputReader.parseInputFile(inputFile);
 
         for (int i=0; i < words.length; i++) {
